@@ -1,0 +1,39 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/jsp/templates/template.xhtml">
+<ui:define name="content">
+
+<h:form>
+ 
+ <div class="hero-unit" align="center" >
+			<h2>Welcome to the Mass Messenger Application</h2>
+			<h4>Reach your candidates and business professionals where they are every day: their inbox.</h4>
+
+<p>
+Think email doesn’t work anymore? Not a chance. Your candidates and business professionals are in their inbox every day – several times a day.
+With Email Marketing you’re sure to reach them, and that means more people through your front door, more calls, and more revenue.
+</p>
+<h4>
+Email Marketing is built for your success:
+</h4>
+			<p>
+				<a href="http://127.0.0.1:8080/massMessenger/faces/jobs.xhtml"
+					class="btn btn-primary btn-large">View Jobs</a>
+					<a href="http://127.0.0.1:8080/massMessenger/faces/contracts.xhtml"
+					class="btn btn-primary btn-large">View Contracts</a>
+			</p>
+
+			<br />
+
+		</div>
+	</h:form>
+	</ui:define>
+	</ui:composition>	
+  
+</html>
+

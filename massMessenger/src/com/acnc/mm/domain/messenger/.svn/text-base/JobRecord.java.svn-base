@@ -1,0 +1,75 @@
+package com.acnc.mm.domain.messenger;
+
+import java.io.Serializable;
+import java.util.Date;
+
+
+
+public class JobRecord implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8293214337324639611L;
+
+	/**
+	 * 
+	 */
+
+	
+	private Long jobID;
+		
+	private Date jobDate;
+	
+	private String jobTitle;
+	
+	private String jobDescription;
+	
+	public JobRecord(){
+		
+	}
+
+	public JobRecord(Long jobID, Date jobDate, String jobTitle, String jobDescription) {
+		this.jobID = jobID;
+		this.jobDate = jobDate;
+		this.jobTitle = jobTitle;
+		this.jobDescription = jobDescription;
+	}
+
+	public Long getJobID() {
+		return jobID;
+	}
+
+	public void setJobID(Long jobID) {
+		this.jobID = jobID;
+	}
+
+	public Date getJobDate() {
+		return jobDate;
+	}
+
+	public void setJobDate(Date jobDate) {
+		this.jobDate = jobDate;
+	}
+
+	public String getJobTitle() {
+		return jobTitle;
+	}
+
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+
+	public String getJobDescription() {
+		return jobDescription;
+	}
+
+	public void setJobDescription(String jobDescription) {
+		this.jobDescription = jobDescription;
+	}
+
+	
+	
+	
+	
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13680713875650" configfile="/massMessenger/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf13783116868460" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf13783116868471 pf13783116868472" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/createJob.xhtml" id="pf13783116868473" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13783116868471" path="/jsp/createJob.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/createCandidate.xhtml" id="pf13783116868474" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13783116868472" path="/jsp/createCandidate.xhtml"/>
+  <links id="pf13783116868471" target="pf13783116868473" source="pf13783116868460" outcome="nav_massMJob"/>
+  <links id="pf13783116868472" target="pf13783116868474" source="pf13783116868460" outcome="nav_massMCandidate"/>
+</pageflow:Pageflow>

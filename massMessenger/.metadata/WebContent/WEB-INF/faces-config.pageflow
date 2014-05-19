@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13680713875650" configfile="/massMessenger/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf13783116868460" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf13783116868471 pf13783116868472" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/createJob.xhtml" id="pf13783116868473" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13783116868471" path="/jsp/createJob.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/createCandidate.xhtml" id="pf13783116868474" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13783116868472" path="/jsp/createCandidate.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/logoutSuccess" id="pf14000853978750" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14000853978761" path="/jsp/logoutSuccess.jspx"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/login" id="pf14000853978762" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14000853978761" path="/jsp/login.jspx"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/accessDenied" id="pf14000853978763" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14000853978764" path="/jsp/accessDenied.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="main.xhtml" id="pf14000853978765" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14000853978764" path="/main.xhtml"/>
+  <links id="pf13783116868471" target="pf13783116868473" source="pf13783116868460" outcome="nav_massMJob"/>
+  <links id="pf13783116868472" target="pf13783116868474" source="pf13783116868460" outcome="nav_massMCandidate"/>
+  <links id="pf14000853978761" target="pf14000853978762" source="pf14000853978750" outcome="login"/>
+  <links id="pf14000853978764" target="pf14000853978765" source="pf14000853978763" outcome="main"/>
+</pageflow:Pageflow>

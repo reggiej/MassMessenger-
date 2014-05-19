@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+.ui-datatable td.scrollableCell div.ui-dt-c {
+    width: 80px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+h5{
+   align: left;
+   columns= "2";
+   cellpadding="4";
+      
+}

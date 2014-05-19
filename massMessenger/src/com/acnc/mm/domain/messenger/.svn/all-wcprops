@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger
+END
+EmailRepo.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/EmailRepo.java
+END
+JobRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/JobRecord.java
+END
+DeleteBusiness.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/DeleteBusiness.java
+END
+GrowlBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/GrowlBean.java
+END
+UpdateBusiness.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/UpdateBusiness.java
+END
+UpdateCandidateInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/UpdateCandidateInfo.java
+END
+EmailRepo2.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/EmailRepo2.java
+END
+ContractRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/ContractRecord.java
+END
+ResumeRepo.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/ResumeRepo.java
+END
+Category.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/Volumes/Playground/massMessenger/!svn/ver/34/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/Category.java
+END
+DeleteContract.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/DeleteContract.java
+END
+FileUpLoad.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/FileUpLoad.java
+END
+EmployResume.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/EmployResume.java
+END
+UpdateContract.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/UpdateContract.java
+END
+UpdateCandidate.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/UpdateCandidate.java
+END
+DeleteCandidate.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/DeleteCandidate.java
+END
+EducationResume.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/EducationResume.java
+END
+FlatFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/Volumes/Playground/massMessenger/!svn/ver/34/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/FlatFile.java
+END
+BusinessRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/BusinessRecord.java
+END
+CandidateInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/CandidateInfo.java
+END
+CertResume.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/Volumes/Playground/massMessenger/!svn/ver/33/massMessenger/massMessenger/src/com/acnc/mm/domain/messenger/CertResume.java
+END

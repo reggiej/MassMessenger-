@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/jsp/templates/template.xhtml">
+<ui:define name="content">
+<h:head>
+
+</h:head>
+<h:body> 
+  
+<p:dialog id="modalDialog1" header="Add New Contract Info" widgetVar="dlg2" modal="true" resizable="false" appendToBody="true">  
+  <h:form id="form1"> 
+   <ui:param name="contract31" value="#{massMessenger.contractRecord}" />  
+  
+  <h:panelGrid columns="2" >
+     <h:outputText value="Contract Title: " />
+  <p:inputText id="test5" value="#{massMessenger.contractTitle}" required="true"/>
+  
+  <h:outputText value="Agency: " />
+  <p:inputTextarea id= "test6" value="#{massMessenger.contractAgency}" autoResize="true"/>
+  <p:commandButton id="submitButton2" onstart="document.forms['searchForm'].submit()" ajax="true" process="@this" update=":modalDialog1" value="Create" oncomplete="dlg2.hide();" type="submit"
+	action="#{massMessenger.saveContractData}"/>  
+  </h:panelGrid>
+  </h:form>
+</p:dialog> 
+
+     
+ <p:dialog id="modalDialog2" header="Add a New Business Developer" widgetVar="dlg3" modal="true" resizable="false" appendToBody="true" >
+ <h:form id="form2"> 
+ <ui:param name="businessRecord1" value="#{massMessenger.businessRecord}" />  
+ <h:panelGrid columns="2">
+    <h:outputText value="First Name: " />
+  <p:inputText id="test1" value="#{massMessenger.businessFirstName}" required="true"/>
+  
+  <h:outputText value="Last Name: " />
+  <p:inputText id="test2" value="#{massMessenger.businessLastName}" required="true"/>
+  
+  <h:outputText value="Phone Number: " />
+  <p:inputText id="test4" value="#{massMessenger.businessPhoneNumber}" required="true"/>
+  
+  <h:outputText value="Email: " />
+  <p:inputText id="test3" value="#{massMessenger.businessEmail}" required="true"/>
+   <p:commandButton id="submitButton1" onstart="document.forms['searchForm'].submit()" ajax="true" process="@this" update=":modalDialog2" value="Create" oncomplete="dlg3.hide();" type="submit"
+	action="#{massMessenger.saveBusinessData}"/>  
+  </h:panelGrid>
+  </h:form>
+</p:dialog> 
+
+<p:dialog id="modalDialog3" header="Edit Contract" widgetVar="dlgedit1" modal="true" resizable="false" appendToBody="true">  
+  <h:form id="form333">    
+   <h:panelGrid id="display" columns="2" cellpadding="4" style="margin:0 auto:">
+     <h:outputText value="Contract Title: " />
+  <p:inputText id="test8" value="#{massMessenger.selectedContracts.contractTitle}" required="true"/>                                                 
+  <h:outputText value="Agency: " />
+  <p:inputTextarea id= "test9" value="#{massMessenger.selectedContracts.contractAgency}" autoResize="true"/>
+  <p:commandButton id="submitButton781" onstart="document.forms['searchForm'].submit()" ajax="true" process="@this" update=":modalDialog3" value="Edit" oncomplete="dlg2.hide();" type="submit"
+	action="#{massMessenger.updateContract}"/>  
+  </h:panelGrid>
+  </h:form>
+</p:dialog> 
+
+<p:dialog id="modalDialog331" header="Delete Contract" widgetVar="dlgedit112" modal="true" resizable="false" appendToBody="true">  
+  <h:form id="form43"> 
+   <h:panelGrid id="display" columns="2" cellpadding="4" style="margin:0 auto:">  
+   
+    <h:outputText value="Contract Title: " />
+  <h:outputText id="test565" value="#{massMessenger.selectedContracts.contractTitle}" required="true"/>
+  
+  <h:outputText value="Agency: " />
+  <h:outputText id= "test656" value="#{massMessenger.selectedContracts.contractAgency}" autoResize="true"/>
+   
+   <h:outputText value="Are You Sure:"/>
+  <!-- <p:inputTextarea id= "test998" value="#{massMessenger.selectedContracts.contractAgency}" autoResize="true"/> -->
+  <p:commandButton id="submitButton9" onstart="document.forms['searchForm'].submit()" ajax="true" process="@this" update=":modalDialog331" value="Delete" 
+	action="#{massMessenger.deleteContract}"/>  
+  </h:panelGrid>
+  </h:form>
+</p:dialog> 
+
+     
+ <p:dialog id="modalDialog4" header="Edit Business Developer" widgetVar="dlgedit2" modal="true" resizable="false" appendToBody="true" >
+<h:form id="form33" >
+<ui:param name="businessRecord2" value="#{massMessenger.businessRecord}" />  
+  
+ <h:panelGrid id="display" columns="2" cellpadding="4" style="margin:0 auto;">
+  <p:inputText id="test411" rendered="false" type="hidden" value="#{massMessenger.selectedBusiness.businessID}"/>
+    <h:outputText value="First Name: " />
+  <p:inputText id="test781" value="#{massMessenger.selectedBusiness.businessFirstName}" required="true"/>
+  
+  <h:outputText value="Last Name: " />
+  <p:inputText id="test981" value="#{massMessenger.selectedBusiness.businessLastName}" required="true"/>
+  
+  <h:outputText value="Phone Number: " />
+  <p:inputText id="test4141" value="#{massMessenger.selectedBusiness.businessPhoneNumber}" required="true"/>
+  
+  <h:outputText value="Email: " />
+  <p:inputText id="test991" value="#{massMessenger.selectedBusiness.businessEmail}" required="true"/>
+   <p:commandButton id="submitButton8" onstart="document.forms['searchForm'].submit()" ajax="true" process="@this" update=":modalDialog2" value="Edit" oncomplete="dlg3.hide();" type="submit"
+	action="#{massMessenger.updateBusiness}"/>  
+  </h:panelGrid>
+ </h:form>
+</p:dialog>
+
+<p:dialog id="modalDialog6" header="Delete Business" widgetVar="digedit4" modal="true" resizable="false" appendToBody="true">
+<h:form id="form6">
+<h:panelGrid id="display" columns="2" cellpadding="4" style="margin:0 auto:">
+<h:outputText value="First Name: " />
+  <h:outputText id="test1" value="#{massMessenger.selectedBusiness.businessFirstName}" required="true"/>
+  
+  <h:outputText value="Last Name: " />
+  <h:outputText id="test2" value="#{massMessenger.selectedBusiness.businessLastName}" required="true"/>
+  
+  <h:outputText value="Phone Number: " />
+  <h:outputText id="test4" value="#{massMessenger.selectedBusiness.businessPhoneNumber}" required="true"/>
+  
+  <h:outputText value="Email: " />
+  <h:outputText id="test3" value="#{massMessenger.selectedBusiness.businessEmail}" required="true"/>
+
+ <h:outputText value="Are You Sure:"/>
+ <!-- <p:inputText id="test888" value="#{massMessenger.selectedBusiness.businessEmail}" required="true"/> -->
+ <p:commandButton id="submitButton5" onstart="document.forms['searchForm'].submit()" ajax="true" process="@this" update=":modalDialog6" value="Delete" 
+ 	action="#{massMessenger.deleteBusiness}"/>  
+  </h:panelGrid>
+  </h:form>
+</p:dialog>
+
+<h:form id="formMain">
+
+        <p:messages id="growl" closable="true" escape="true"/>
+        
+  <div align="center">
+         <p:tabView id="tabView" style="width:85%">   
+ 
+    <p:tab title="Data Repository"> 
+     
+      <p:panel header="Current System Data" >  
+           <div align="left">
+      <p:panelGrid columns="6">
+     
+           <h:outputText value="Business Development Data" />
+           <p:menuButton id="menuinfoAdmin" value="Populate" >
+<!-- <p:menuitem id="admin" value="Add Contracts" action="siteAdministration" onclick="dlg2.show()"/> -->
+         <p:menuitem id="admin2" value="Add BD POCs" action="logs" onclick="dlg3.show()"/>
+            </p:menuButton>
+            <h:outputText value="Bulk UpLoads: " />
+            <p:selectOneRadio value="#{massMessenger.number}">
+									<f:selectItem itemLabel="Contract" itemValue="3" />
+									<!-- <f:selectItem itemLabel="PointOfContact" itemValue="4" /> -->
+									<p:ajax event="click" process="@this" update=":formMain"
+										listener="#{massMessenger.radiobutton}" />
+			</p:selectOneRadio>
+			<p:fileUpload fileUploadListener="#{massMessenger.contFileUpload}" 
+			              rendered="#{massMessenger.showContractUpLoaderDisable}"
+						  multiple="false" showButtons="false"
+						  update=":formMain" mode="advanced" dragDropSupport="false"
+						  sizeLimit="16177215" fileLimit="3"
+						  allowTypes="/(\.|\/)(gif|jpe?g|png|pdf|docx|txt|DOC|DOCX|doc|docx|ppt|pptx|xls|xlsx|csv)$/" />
+								 
+           </p:panelGrid>
+           </div>
+
+ <p:dataTable id="dtBusiness" var="business" value="#{massMessenger.allBusinessPosted}" paginator="true" rows="5"
+rowKey="#{business.businessID}" selection="#{massMessenger.allSelectedBusiness}"> 
+<p:column selectionMode="multiple" style="width:10px"/>
+
+<!-- <p:column headerText="ID" sortBy="#{business.businessID}" filterMatchMode="contains" filterBy="#{business.businessID}">
+<h:outputText value="#{business.businessID}"/>
+</p:column> -->
+
+<p:column headerText="First Name" sortBy="#{business.businessFirstName}" >
+<h:outputText value="#{business.businessFirstName}"/>
+</p:column>
+
+<p:column headerText="Last Name" sortBy="#{business.businessLastName}" >
+<h:outputText value="#{business.businessLastName}"/>
+</p:column>
+
+<p:column headerText="Phone Number" sortBy="#{business.businessPhoneNumber}" >
+<h:outputText value="#{business.businessPhoneNumber}"/>
+</p:column>
+
+
+<p:column headerText="Email" sortBy="#{business.businessEmail}" >
+<h:outputText value="#{business.businessEmail}"/>
+</p:column>
+
+
+<p:column style="width:4%" headerText="Options"> 
+
+      <!-- Business Development DATA --> 
+                <p:commandButton id="selectButton" oncomplete="dlgedit2.show()" value="Edit" 
+                icon="ui-icon-edit"  title="View" update=":form33:display" >  
+                <f:setPropertyActionListener value="#{business}" target="#{massMessenger.selectedBusiness}" />  
+            </p:commandButton>  
+            
+              <p:commandButton id="selectButton1" oncomplete="digedit4.show()" value="Delete" 
+               icon="ui-icon-trash" title="View" update=":form6:display">  
+                <f:setPropertyActionListener value="#{business}" target="#{massMessenger.selectedBusiness}" />  
+            </p:commandButton> 
+        </p:column>
+
+</p:dataTable>
+ <br></br>
+  <div align="left">
+    <p:panelGrid columns="2">
+ 
+  <h:outputText value="Contract's Data" />
+   <p:menuButton id="menuinfoAdmin2" value="Populate" >
+     <p:menuitem id="admin" value="Add Contracts" action="siteAdministration" onclick="dlg2.show()"/>
+         <!-- <p:menuitem id="admin2" value="Add BD POCs" action="logs" onclick="dlg3.show()"/> -->
+            </p:menuButton>
+  
+  </p:panelGrid>
+  </div>
+  
+  <p:dataTable id="dtcontract" var="contract" value="#{massMessenger.allContractPosted}"  paginator="true" rows="5"
+rowKey="#{contract.contractID}" selection="#{massMessenger.selectedContract}" > 
+<p:column selectionMode="single" style="width:10px" />
+
+<!-- <p:column headerText="ID" sortBy="#{contract.contractID}" filterMatchMode="contains" filterBy="#{contract.contractID}">
+<h:outputText value="#{contract.contractID}"/>
+</p:column> -->
+
+<p:column headerText="Contract Title" sortBy="#{contract.contractTitle}" >
+<h:outputText value="#{contract.contractTitle}"/>
+</p:column>
+
+<p:column headerText="Contract Agency" sortBy="#{contract.contractAgency}" >
+<h:outputText value="#{contract.contractAgency}"/>
+</p:column>
+
+<p:column style="width:4%" headerText="Options">  
+
+   <!-- Contract Buttons -->
+   <!--                 icon="ui-icon-edit" title="View" update=":form333:display">  
+
+ -->  
+                <p:commandButton id="selectButton11" oncomplete="dlgedit1.show()" value="Edit" icon="ui-icon-edit" 
+                title="View" update=":form333:display">  
+                <f:setPropertyActionListener value="#{contract}" target="#{massMessenger.selectedContracts}" />  
+                </p:commandButton> 
+            
+           <!--  <h:commandLink id="selectButton11" oncomplete="dlgedit1.show()" action="#{jsfBean.submit}" value="execute multiple methods"
+                               icon="ui-icon-edit" title="View" update=":form333:display" >
+                <f:actionListener binding="#{massMessenger.selectedContract}"/>
+                 
+                 
+<                </h:commandLink> -->
+            
+            <p:commandButton id="selectButton12" oncomplete="dlgedit112.show()" value="Delete" 
+                icon="ui-icon-trash" title="View" update=":form43:display">  
+                <f:setPropertyActionListener value="#{contract}" target="#{massMessenger.selectedContracts}" />  
+            </p:commandButton>   
+        </p:column>
+
+</p:dataTable>
+<br></br>
+<p:panelGrid columns="2">
+<h:outputText value="Set Selection(s) to Pending State: " />
+       <p:commandButton id="cbMMCanDtJobBtn1" onstart="document.forms['searchForm'].submit()" value="Save" action="#{massMessenger.addLinkedConandBDD}" ajax="true" process="@this" update="emailiddt2" type="submit"/>
+</p:panelGrid>
+</p:panel>
+</p:tab>
+<br></br>
+<p:tab title="Selected Data" disabled="#{massMessenger.showSelectedLstDisable2}">
+<p:panel header="Pending Email Queue" rendered="#{massMessenger.showSelectedLst2}">
+<h:outputText value="New Email Data" />
+  
+  <p:dataTable id="emailiddt2" var="emailRepo2" value="#{massMessenger.allAddedEmailsInfo2}" paginator="true" rows="5"
+rowKey="#{emailRepo2.emailRepoID}" > 
+
+<p:column headerText="First Name" sortBy="#{emailRepo2.businessFirstName}">
+<h:outputText value="#{emailRepo2.businessFirstName}"/>
+</p:column>
+
+<p:column headerText="Last Name" sortBy="#{emailRepo2.businessLastName}">
+<h:outputText value="#{emailRepo2.businessLastName}"/>
+</p:column>
+
+<p:column headerText="Email Account" sortBy="#{emailRepo2.businessEmail}">
+<h:outputText value="#{emailRepo2.businessEmail}"/>
+</p:column>
+
+<p:column headerText="Contract Title" sortBy="#{emailRepo2.contractTitle}">
+<h:outputText value="#{emailRepo2.contractTitle}"/>
+</p:column>
+
+</p:dataTable>
+<br></br>
+<p:panelGrid columns="2">
+<h:outputText value="Store and Send Selected List to Email Service: " />
+       <p:commandButton id="cbMMCanDtJobBtn2" onstart="document.forms['searchForm'].submit()" value="Submit" action="#{massMessenger.sendToEmailService2}" ajax="true" process="@this" update="emailiddt1" type="submit"/>
+</p:panelGrid>
+</p:panel>
+</p:tab>
+ <br></br>
+ <p:tab title="Sent Log">
+  <p:panel header="Overall Previously Sent Email Repository" toggleable="false" >
+  
+  <p:dataTable id="emailiddt1" var="emailRepo2" value="#{massMessenger.allEmailPosted2}" paginator="true" rows="5"
+rowKey="#{emailRepo2.emailRepoID}" > 
+
+<p:column headerText="ID" sortBy="#{emailRepo2.emailRepoID}">
+<h:outputText value="#{emailRepo2.emailRepoID}"/>
+</p:column>
+
+<p:column headerText="Email Account" sortBy="#{emailRepo2.businessEmail}">
+<h:outputText value="#{emailRepo2.businessEmail}"/>
+</p:column>
+
+<p:column headerText="Contract Title" sortBy="#{emailRepo2.contractTitle}">
+<h:outputText value="#{emailRepo2.contractTitle}"/>
+</p:column>
+
+<!-- <p:column headerText="Date" sortBy="#{emailRepo.dtCreated}">
+<h:outputText value="#{emailRepo.dtCreated}"/>
+</p:column> -->
+
+</p:dataTable>
+</p:panel>
+</p:tab>
+<!--  </h:panelGrid>
+ -->
+    </p:tabView>
+ </div>
+         </h:form>
+     <h:outputScript name="js/bootstrap.min.js" />
+
+
+</h:body>
+
+</ui:define>
+</ui:composition>
+</html>
