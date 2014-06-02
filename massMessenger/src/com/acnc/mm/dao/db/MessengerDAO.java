@@ -31,7 +31,7 @@ public interface MessengerDAO {
 	
 	
 
-	public List<JobRecord> getJobs();
+	/*public List<JobRecord> getJobs();*/
     //Populate Candidate information Table
 	public void svCandidate(CandidateInfo candidateInfo);
 
@@ -39,7 +39,7 @@ public interface MessengerDAO {
 
 	public void svEmailQueue(List<EmailRepo> allAddedEmailsInfo);
 
-	public List<EmailRepo> getEmailRepo();
+	/*public List<EmailRepo> getEmailRepo();*/
 
 	public void updateCandidate(UpdateCandidate updateCandidate);
 
@@ -51,9 +51,9 @@ public interface MessengerDAO {
 
 	public void svContract(ContractRecord ContractRecord);
 
-	public List<ContractRecord> getContracts();
+	/*public List<ContractRecord> getContracts();
 
-	public List<BusinessRecord> getBusiness();
+	public List<BusinessRecord> getBusiness();*/
 
 	public void svBusiness(BusinessRecord businessRecord);
 
@@ -65,7 +65,7 @@ public interface MessengerDAO {
 
 	public void updateContractinfo(UpdateContract updateContract);
 
-	public List<EmailRepo2> getEmailRepo2();
+	/*public List<EmailRepo2> getEmailRepo2();*/
 
 	public void svEmailQueue2(List<EmailRepo2> allAddedEmailsInfo2);
 	//Resume save wizard
@@ -77,7 +77,7 @@ public interface MessengerDAO {
 
 	public void svCertResume(CertResume certResume);
 
-	public List<CandidateInfo> getAllCandidateInfo();
+	/*public List<CandidateInfo> getAllCandidateInfo();*/
 
 	public void saveEmployInfo(List<EmployResume> mainER);
 
@@ -87,15 +87,15 @@ public interface MessengerDAO {
 	//Resume save wizard
 	public void saveCandidateInfo(List<CandidateInfo> cnd);
 
-	public List<EducationResume> getAllEducation();
+	/*public List<EducationResume> getAllEducation();
 
 	public List<EmployResume> getAllEmploy();
 
-	public List<CertResume> getAllCert();
+	public List<CertResume> getAllCert();*/
 
 	public void getALLCert(CertResume certResume);
 
-	public List<CandidateInfo> getAllQueryRecord();
+	/*public List<CandidateInfo> getAllQueryRecord();*/
 
 	public void updateCandidateInfo(CandidateInfo candidateInfo);
 
@@ -107,11 +107,11 @@ public interface MessengerDAO {
 
 	public void candID(long passID);
 
-	public List<CertResume> getSelectedCertsInfomation(Long passID);
+	/*public List<CertResume> getSelectedCertsInfomation(Long passID);
 
 	public List<EducationResume> getSelectedEducationInformation(Long passID);
 
-	public List<EmployResume> getSelectedEmployInfomation(Long passID);
+	public List<EmployResume> getSelectedEmployInfomation(Long passID);*/
 
 	public void svUpdatedEmploy(EmployResume employResume);
 

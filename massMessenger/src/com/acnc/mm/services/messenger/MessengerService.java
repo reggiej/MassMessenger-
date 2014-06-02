@@ -26,7 +26,7 @@ import com.acnc.mm.domain.messenger.UpdateContract;
  */
 public interface MessengerService  {
 	
-	public List<JobRecord> getAllJobs();
+	/*public List<JobRecord> getAllJobs();*/
     //Populate candidate table
 	public void saveCandidate(CandidateInfo candidateInfo);
 
@@ -34,7 +34,7 @@ public interface MessengerService  {
 
 	public void saveEmailQueue(List<EmailRepo> allAddedEmailsInfo);
 
-	public List<EmailRepo> getAllEmailRepos();
+	/*public List<EmailRepo> getAllEmailRepos();*/
 
 	public void deleteCandidate(UpdateCandidateInfo updateCandidateinfo);
 
@@ -44,10 +44,10 @@ public interface MessengerService  {
 
 	public void saveContract(ContractRecord contractRecord);
 
-	public List<ContractRecord> getAllContracts();
+	/*public List<ContractRecord> getAllContracts();
 
 	public List<BusinessRecord> getAllBusiness();
-
+*/
 	public void saveBusiness(BusinessRecord businessRecord);
 
 	public void updateBusiness(UpdateBusiness updateBusiness);
@@ -58,7 +58,7 @@ public interface MessengerService  {
 
 	public void updateContract(UpdateContract updateContract);
 
-	public List<EmailRepo2> getAllEmailRepos2();
+	/*public List<EmailRepo2> getAllEmailRepos2();*/
 
 	public void saveEmailQueue2(List<EmailRepo2> allAddedEmailsInfo2);
 	
@@ -68,7 +68,7 @@ public interface MessengerService  {
 
 	public void saveCertResume(CertResume certResume);
 
-	public List<CandidateInfo> getAllCandidateInfo();
+	/*public List<CandidateInfo> getAllCandidateInfo();*/
 
 	public void saveEmployInfo(List<EmployResume> mainER);
 
@@ -86,15 +86,15 @@ public interface MessengerService  {
 
 	public void svemployresume(EmployResume employResume);
 
-	public List<EducationResume> getAllEducation();
+	/*public List<EducationResume> getAllEducation();
 
 	public List<EmployResume> getAllEmploy();
 
-	public List<CertResume> getAllCert();
+	public List<CertResume> getAllCert();*/
 
 	public void getAllCert(CertResume certResume);
 
-	public List<CandidateInfo> getAllQueryRecord();
+	/*public List<CandidateInfo> getAllQueryRecord();*/
 
 	public void updateCandidateInfo(CandidateInfo candidateInfo);
 
@@ -106,11 +106,11 @@ public interface MessengerService  {
 
 	public void candID(long passID);
 
-	public List<CertResume> getSelectedCertsInfo(Long passID);
+	/*public List<CertResume> getSelectedCertsInfo(Long passID);
 
 	public List<EducationResume> getSelectedEducationInfo(Long passID);
 
-	public List<EmployResume> getSelectedEmployInfo(Long passID);
+	public List<EmployResume> getSelectedEmployInfo(Long passID);*/
 
 	public void updateEmploy(EmployResume employResume);
 

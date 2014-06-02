@@ -21,16 +21,16 @@ With Email Marketing you’re sure to reach them, and that means more people thr
 <h4>
 Email Marketing is built for your success:
 </h4>
-			<!-- <p>
+			<p>
 				<a href="http://127.0.0.1:8080/massMessenger/faces/jobs.xhtml"
 					class="btn btn-primary btn-large">View Jobs</a>
 					<a href="http://127.0.0.1:8080/massMessenger/faces/contracts.xhtml"
 					class="btn btn-primary btn-large">View Contracts</a>
-			</p> -->
-			
-		</div>
-		
+			</p>
+
 			<br />
+
+		</div>
 	</h:form>
 	</ui:define>
 	</ui:composition>	

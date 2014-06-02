@@ -330,23 +330,23 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 			MessengerConstants.MM_SCHEMA_NAME + ".businessdev ";
 
 		
-	public List<EmailRepo> getEmailRepo() {
+	/*public List<EmailRepo> getEmailRepo() {
 		log.info("this is the email repo pull ");
 		JdbcTemplate template = getJdbcTemplate();
 		List<EmailRepo> newEmailRecord = template.query(SQL_GET_ALL_EMAIL_REPO, 
 				new EmailParameterizedRowMapper<EmailRepo>());
 		
 		return newEmailRecord;
-	}
+	}*/
 		
-	public List<CandidateInfo> getCandInfoID(){
+	/*public List<CandidateInfo> getCandInfoID(){
 		log.info("This is All of the candidates ");
 		JdbcTemplate template = getJdbcTemplate();
 		List<CandidateInfo> newCandidateInfo = template.query(SQL_GET_MAX_ID_CANDINFO, 
 				new CandInfoParameterizedRowMapper<CandidateInfo>());
 		
 		return newCandidateInfo;
-	}
+	}*/
 	
 
      
@@ -362,7 +362,7 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
     	return candinfoID;
 	}
  
-    @Override
+    /*@Override
 	public List<CandidateInfo> getAllCandidateInfo() {
     	log.info("This is the max ID for ID");
 		JdbcTemplate template = getJdbcTemplate();
@@ -370,35 +370,35 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 				new CandInfoParameterizedRowMapper<CandidateInfo>());
 		
 		return newCandidateInfo;
-	}
+	}*/
 
-	public List<JobRecord> getJobs() {
+	/*public List<JobRecord> getJobs() {
 		log.info("this is the job id to query from ");
 		JdbcTemplate template = getJdbcTemplate();
 		List<JobRecord> newJobRecord = template.query(SQL_GET_ALL_JOBS, 
 				new JobParameterizedRowMapper<JobRecord>());
 		
 		return newJobRecord;
-	}
+	}*/
 	
-	public List<ContractRecord> getContracts() {
+	/*public List<ContractRecord> getContracts() {
 		log.info("this is the contract id to query from ");
 		JdbcTemplate template = getJdbcTemplate();
 		List<ContractRecord> newContractRecord = template.query(SQL_GET_ALL_CONTRACTS, 
 				new ContractParameterizedRowMapper<ContractRecord>());
 		
 		return newContractRecord;
-	}
+	}*/
 
 	
-	public List<BusinessRecord> getBusiness() {
+	/*public List<BusinessRecord> getBusiness() {
 		log.info("this is the business id to query from ");
 		JdbcTemplate template = getJdbcTemplate();
 		List<BusinessRecord> newBusinessRecord = template.query(SQL_GET_ALL_BUSINESS, 
 				new BusinessParameterizedRowMapper<BusinessRecord>());
 		
 		return newBusinessRecord;
-	}
+	}*/
 	
 	
 	final static private String SQL_INSERT_CANDIDATE =
@@ -821,7 +821,7 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 		
 	}
 
-	@Override
+	/*@Override
 	public List<EducationResume> getAllEducation() {
 		log.info("this is the education pull ");
 		JdbcTemplate template = getJdbcTemplate();
@@ -849,7 +849,7 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 				new CertInfoParameterizedRowMapper<CertResume>());
 		
 		return newCertResume;
-	}
+	}*/
 
 	@Override
 	public void getALLCert(CertResume certResume) {
@@ -868,7 +868,7 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 	}
 
 
-	@Override
+	/*@Override
 	public List<CandidateInfo> getAllQueryRecord() {
 		log.info("This is the entire record call");
 		
@@ -876,7 +876,7 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 		List<CandidateInfo> newCandidateInfo = template.query("Select * from " + MessengerConstants.MM_SCHEMA_NAME + ".candinfo where enabled = 0", 
 				new CandInfoParameterizedRowMapper<CandidateInfo>());
 		return newCandidateInfo;
-	}
+	}*/
 
 	
 	@Override
@@ -961,7 +961,7 @@ public class MessengerDAOImpl extends BaseSpringJdbcDAO implements MessengerDAO,
 	
 	
 
-	@Override
+	/*@Override
 	public List<CertResume> getSelectedCertsInfomation(Long passID) {
 		
 		JdbcTemplate template = getJdbcTemplate();
@@ -991,7 +991,7 @@ public List<EmployResume> getSelectedEmployInfomation(Long passID) {
 	
 	return newEmployResume;
 	
-}
+}*/
 
 @Override
 public void svUpdatedEmploy(EmployResume employResume) {

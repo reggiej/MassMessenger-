@@ -39,10 +39,19 @@ xmlns:ui="http://java.sun.com/jsf/facelets"
 						
 						<li class="#{view.viewId == '/help.xhtml' ? 'active' : ''}">
 						<a href="/massMessenger/faces/help.xhtml">Help</a></li>
+						
+						<li class="#">
+						<p:commandLink id="Logout" action="#{loginBean.logout}" ajax="false">
+						<h:outputText value="Logout" />
+						</p:commandLink>
+						</li>
+						<!-- <a href="#{request.contextPath}/j_spring_security_logout">logout</a></li> -->
 					</ul>
 					
+					 
 					 <p class="navbar-text pull-right">
-						Logged in as <a href="#">Anonymous</a>
+						Logged in as <a href="#"><h:outputText value="#loginBean.nameuser"/></a>
+				 
 					</p> 
 					
 					

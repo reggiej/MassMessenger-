@@ -41,10 +41,10 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}
 	
 	
-	public List<JobRecord> getAllJobs(){
+	/*public List<JobRecord> getAllJobs(){
 		log.info("getting all jobs ");
 		return messengerDAO.getJobs();
-	}
+	}*/
 
 	public MessengerDAO getMessengerDAO() {
 		return messengerDAO;
@@ -67,10 +67,10 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}
 
 
-	public List<EmailRepo> getAllEmailRepos() {
+	/*public List<EmailRepo> getAllEmailRepos() {
 		log.info("getting all email repoed ");
 		return messengerDAO.getEmailRepo();
-	}
+	}*/
 
 
 	public void saveEmailQueue(List<EmailRepo> allAddedEmailsInfo) {
@@ -111,7 +111,7 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}
 
 
-	@Override
+	/*@Override
 	public List<ContractRecord> getAllContracts() {
 		log.info("getting all contracts ");
 		return messengerDAO.getContracts();
@@ -122,7 +122,7 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	public List<BusinessRecord> getAllBusiness() {
 		log.info("getting all Business ");
 		return messengerDAO.getBusiness();
-	}
+	}*/
 
 
 	@Override
@@ -166,10 +166,10 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 
 
 	
-	public List<EmailRepo2> getAllEmailRepos2() {
+	/*public List<EmailRepo2> getAllEmailRepos2() {
 		log.info("getting all email repoed 2 ");
 		return messengerDAO.getEmailRepo2();
-	}
+	}*/
 
 
 	
@@ -220,11 +220,11 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}*/
 
 
-	@Override
+	/*@Override
 	public List<CandidateInfo> getAllCandidateInfo() {
 		log.info("get all of candaite info step one");
 		return messengerDAO.getAllCandidateInfo();
-	}
+	}*/
 
 
 	
@@ -283,7 +283,7 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}
 
 
-	@Override
+	/*@Override
 	public List<EducationResume> getAllEducation() {		
 		return messengerDAO.getAllEducation();
 	}
@@ -298,7 +298,7 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	@Override
 	public List<CertResume> getAllCert() {		
 		return messengerDAO.getAllCert();
-	}
+	}*/
 
 
 	@Override
@@ -308,10 +308,10 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}
 
 
-	@Override
+	/*@Override
 	public List<CandidateInfo> getAllQueryRecord() {		
 		return messengerDAO.getAllQueryRecord();
-	}
+	}*/
 
 
 	@Override
@@ -353,7 +353,7 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	}
 
 
-	@Override
+	/*@Override
 	public List<CertResume> getSelectedCertsInfo(Long passID) {		
 		return messengerDAO.getSelectedCertsInfomation(passID);
 	}
@@ -368,7 +368,7 @@ public class MessengerServiceImpl implements MessengerService, Serializable {
 	@Override
 	public List<EmployResume> getSelectedEmployInfo(Long passID) {		
 		return messengerDAO.getSelectedEmployInfomation(passID);
-	}
+	}*/
 
 
 	@Override

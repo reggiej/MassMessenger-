@@ -377,19 +377,19 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 	
 	allJobPosted = new ArrayList<JobRecord>();
 	
-	allJobPosted = messengerService.getAllJobs();
-	
+	/*allJobPosted = messengerService.getAllJobs();
+	*/
 	allEducationPosted = new ArrayList<EducationResume>();
     
-    allEducationPosted = messengerService.getAllEducation();
+    /*allEducationPosted = messengerService.getAllEducation();*/
 	
 	allEmployPosted = new ArrayList<EmployResume>();
 	
-	allEmployPosted = messengerService.getAllEmploy();
+	/*allEmployPosted = messengerService.getAllEmploy();*/
 	
 	allCertPosted = new ArrayList<CertResume>();
 	
-	allCertPosted = messengerService.getAllCert();
+	/*allCertPosted = messengerService.getAllCert();*/
 	
 	allSelectedCerts = new ArrayList<CertResume>();
 	
@@ -429,39 +429,39 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 	
 	allContractPosted = new ArrayList<ContractRecord>();
 	
-	allContractPosted = messengerService.getAllContracts();
+	/*allContractPosted = messengerService.getAllContracts();*/
 	
 	allCandidateInfoPosted = new ArrayList<CandidateInfo>();
 	
-	allCandidateInfoPosted = messengerService.getAllCandidateInfo();
+	/*allCandidateInfoPosted = messengerService.getAllCandidateInfo();*/
 	
     allEducationPosted = new ArrayList<EducationResume>();
     
-    allEducationPosted = messengerService.getAllEducation();
+    /*allEducationPosted = messengerService.getAllEducation();*/
 	
 	allEmployPosted = new ArrayList<EmployResume>();
 	
-	allEmployPosted = messengerService.getAllEmploy();
+	/*allEmployPosted = messengerService.getAllEmploy();*/
 	
 	allCertPosted = new ArrayList<CertResume>();
 	
-	allCertPosted = messengerService.getAllCert();
+	/*allCertPosted = messengerService.getAllCert();*/
 	
     allQueryRecord = new ArrayList<CandidateInfo>();
 	
-	allQueryRecord = messengerService.getAllQueryRecord();
+	/*allQueryRecord = messengerService.getAllQueryRecord();*/
 	
 	allBusinessPosted = new ArrayList<BusinessRecord>();
 	
-	allBusinessPosted = messengerService.getAllBusiness();
+	/*allBusinessPosted = messengerService.getAllBusiness();*/
 	
 	allEmailPosted = new ArrayList<EmailRepo>();
 	
-	allEmailPosted = messengerService.getAllEmailRepos();
+	/*allEmailPosted = messengerService.getAllEmailRepos();*/
 	
 	allEmailPosted2 = new ArrayList<EmailRepo2>();
 	
-	allEmailPosted2 = messengerService.getAllEmailRepos2();
+	/*allEmailPosted2 = messengerService.getAllEmailRepos2();*/
 	
 	jobRecord = new JobRecord();
 	
@@ -620,29 +620,29 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 	
 	public void shwJobFrm(){
 		log.info("showing job form");
-		jobRecord = new JobRecord();
+		/*jobRecord = new JobRecord();*/
 	}
 	
 		
 	public void shwConFrm(){
 		log.info("showing contract form");
-		contractRecord = new ContractRecord();
+		/*contractRecord = new ContractRecord();*/
 	}
 	
 	
 	public void upCandfrm(){
 		log.info("showing updated candidate info");
-		updateCandidateinfo = new UpdateCandidateInfo();
+		/*updateCandidateinfo = new UpdateCandidateInfo();*/
 	}
 	 
 	public void upBusfrm(){
 		log.info("showing business form");
-		updateBusiness = new UpdateBusiness();
+		/*updateBusiness = new UpdateBusiness();*/
 	}
 	
 	public void showCANfrm(){
 		log.info("Showing candidates");
-		candidateInfo = new CandidateInfo();
+		/*candidateInfo = new CandidateInfo();*/
 	}
 	
  	public String deleteCandidate(){
@@ -882,13 +882,13 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 		System.out.println(selectedCandidateInfo.getCandinfo_id());
 			
 	    allSelectedCerts = new ArrayList<CertResume>();
-		allSelectedCerts = messengerService.getSelectedCertsInfo(passID);
+		/*allSelectedCerts = messengerService.getSelectedCertsInfo(passID);*/
 	
 	    allSelectedEducation = new ArrayList<EducationResume>();
-	    allSelectedEducation = messengerService.getSelectedEducationInfo(passID);
+	    /*allSelectedEducation = messengerService.getSelectedEducationInfo(passID);*/
 		
 	    allSelectedEmploy = new ArrayList<EmployResume>();
-	    allSelectedEmploy = messengerService.getSelectedEmployInfo(passID);
+	    /*allSelectedEmploy = messengerService.getSelectedEmployInfo(passID);*/
 	    
 	    //showEditButtonDisable = Boolean.TRUE;
 		
@@ -1621,7 +1621,7 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 		messengerService.saveEmailQueue(allAddedEmailsInfo);
 		allAddedEmailsInfo = new ArrayList<EmailRepo>();
 		allEmailPosted = new ArrayList<EmailRepo>();		
-		allEmailPosted = messengerService.getAllEmailRepos();
+		/*allEmailPosted = messengerService.getAllEmailRepos();*/
 		showSelectedLst = Boolean.FALSE;
 		showSelectedLstDisable = Boolean.TRUE;
 		addMessage("Selected Data sent out to the email service and sotred to reposiotry auto emails!");
@@ -1704,7 +1704,7 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 		messengerService.saveEmailQueue2(allAddedEmailsInfo2);
 		allAddedEmailsInfo2 = new ArrayList<EmailRepo2>();
 		allEmailPosted2 = new ArrayList<EmailRepo2>();		
-		allEmailPosted2 = messengerService.getAllEmailRepos2();
+		/*allEmailPosted2 = messengerService.getAllEmailRepos2();*/
 		showSelectedLst2 = Boolean.FALSE;
 		showSelectedLstDisable2 = Boolean.TRUE;
 		addMessage("Selected Data sent out to the email service and sotred to reposiotry auto emails!");
@@ -1719,41 +1719,41 @@ public class ViewMessengerData<updateCandidate>  extends BaseUIBean implements S
 		
 		allJobPosted = new ArrayList<JobRecord>();
 		
-		allJobPosted = messengerService.getAllJobs();
-		
+		/*allJobPosted = messengerService.getAllJobs();
+		*/
 		allContractPosted = new ArrayList<ContractRecord>();
 		
-		allContractPosted = messengerService.getAllContracts();
+		/*allContractPosted = messengerService.getAllContracts();*/
 		
 		allEducationPosted = new ArrayList<EducationResume>();
 	    
-	    allEducationPosted = messengerService.getAllEducation();
+	   /* allEducationPosted = messengerService.getAllEducation();*/
 		
 		allEmployPosted = new ArrayList<EmployResume>();
 		
-		allEmployPosted = messengerService.getAllEmploy();
+		/*allEmployPosted = messengerService.getAllEmploy();*/
 		
 		allCertPosted = new ArrayList<CertResume>();
 		
-		allCertPosted = messengerService.getAllCert();
+		/*allCertPosted = messengerService.getAllCert();*/
 		
 		allSelectedCerts = new ArrayList<CertResume>();
 		
-		allSelectedCerts = messengerService.getSelectedCertsInfo(passID);
+		/*allSelectedCerts = messengerService.getSelectedCertsInfo(passID);*/
 		
 		selectedCerts = new ArrayList<CertResume>();
 		
 		allBusinessPosted = new ArrayList<BusinessRecord>();
 		
-		allBusinessPosted = messengerService.getAllBusiness();
+		/*allBusinessPosted = messengerService.getAllBusiness();*/
 		
         allQueryRecord = new ArrayList<CandidateInfo>();
 		
-		allQueryRecord = messengerService.getAllQueryRecord();		
+		/*allQueryRecord = messengerService.getAllQueryRecord();	*/	
 		
 		allCandidateInfoPosted = new ArrayList<CandidateInfo>();
 		
-		allCandidateInfoPosted = messengerService.getAllCandidateInfo();
+		/*allCandidateInfoPosted = messengerService.getAllCandidateInfo();*/
 		
 		educationResume = new EducationResume();
 		

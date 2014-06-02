@@ -6,11 +6,16 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
     version="2.1">
     <application>
-		 
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver> 
 		<locale-config>
 			<default-locale>en</default-locale>
 		</locale-config>
-		<message-bundle>JSF-override</message-bundle>		 
+		<message-bundle>JSF-override</message-bundle>
+		
+		<resource-bundle>
+		 <base-name>com.acnc.mm.properties.message</base-name>
+		 <var>msg</var>		
+		</resource-bundle>		 
 	</application>
 	
 <managed-bean>
@@ -45,7 +50,7 @@
 		</navigation-case>
 	</navigation-rule>
 	
-	<navigation-rule>
+	<!-- <navigation-rule>
 		<display-name>jsp/logoutSuccess</display-name>
 		<from-view-id>/jsp/logoutSuccess.jspx</from-view-id>
 		<navigation-case>
@@ -61,5 +66,5 @@
 			<from-outcome>main</from-outcome>
 			<to-view-id>/main.xhtml</to-view-id>
 		</navigation-case>
-	</navigation-rule>
+	</navigation-rule> -->
 </faces-config>

@@ -3,6 +3,7 @@
 		   		 xmlns:beans="http://www.springframework.org/schema/beans"
 		   		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	       		 xmlns:util="http://www.springframework.org/schema/util"
+	       		 xmlns:faces="http://www.springframework.org/schema/faces"
 	       		 xmlns:context="http://www.springframework.org/schema/context"
 	       		 xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -11,7 +12,7 @@
 						http://www.springframework.org/schema/context
 						http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-
+   <context:component-scan base-package="com.acnc.mm" />
     
 	
 	 <beans:bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
@@ -30,18 +31,30 @@
 	<!-- Provides security method filtering -->
 	 <security:global-method-security secured-annotations="enabled" jsr250-annotations="enabled"  />
 	
-	 <security:http auto-config="true" access-denied-page="/jsp/denied.xhtml">
+	 <security:http auto-config="true" access-denied-page="/faces/login.xhtml">
 	 <security:form-login 
-			login-page="/main.xhtml" 	
-			authentication-failure-url="/jsp/denied.xhtml?error=true" 
-			default-target-url=""
+			login-page="/faces/login.xhtml" 	
+			authentication-failure-url="/faces/login?error" 
+			default-target-url="/faces/main.xhtml"
 			always-use-default-target='true' />	
-		<security:logout logout-success-url="" />
+		<security:logout 
+		   logout-success-url="/faces/logout.xhtml" />
+		
+		<security:session-management>
+		<security:concurrency-control max-sessions="10"/>
+		</security:session-management>
 		
 		<!-- intercept patterns -->
-		<!-- <security:intercept-url pattern="jsp/main.iface" filters="none" />
-		<security:intercept-url pattern="jsp/admin/**" access="ROLE_ADMIN" />
-		<security:intercept-url pattern="jsp/**" access="IS_AUTHENTICATED_FULLY" /> -->
+		<security:intercept-url pattern="/faces/main**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/contracts**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/buildresume**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/jobs**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/resume**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/viewresume**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/logout**" access="ROLE_ADMIN"/>
+		<security:intercept-url pattern="/faces/login**" access="ROLE_ANONYMOUS"/>
+		
+				
 		 <!-- Concurrent Sessions Settings --> 
 		
 	 
@@ -49,16 +62,16 @@
 	
 	
 	<!-- Authentication Manager -->		
-	<security:authentication-manager>
-	   <security:authentication-provider>
-	   <security:user-service>
-	     <security:user name="admin" password="admin" authorities="ROLE_USER"/>
-	   </security:user-service>
-	   </security:authentication-provider>
+	<security:authentication-manager alias="authenticationManager">
+	   <security:authentication-provider user-service-ref="userDetailsService" />
 	</security:authentication-manager> 
 	
+	<beans:bean id="userDetailsService" class="com.acnc.mm.application.impl.UserDetailsServiceImpl">
+	 
+	</beans:bean >
 	
-    <!-- Security Messages -->
+		
+   <!--  Security Messages -->
 	<beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" >
 		<beans:property name="basename" value="org/springframework/security/messages"/>
 	</beans:bean>

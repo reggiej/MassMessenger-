@@ -38,33 +38,12 @@ file
 
 
 
-2014-04-28T21:06:23.000000Z
-7d32b48df40e11c0dbb4a4da93925991
+
+359bf28278bf09cd04ad97a05b561ea2
 2014-04-29T15:47:47.716673Z
 34
 boyz_bama3@yahoo.com
 has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1359
 
 contracts.xhtml
 file
@@ -139,8 +118,8 @@ file
 
 
 
+replace
 
-2013-08-21T14:01:15.000000Z
 c961872b1ea7bd3ec3cfc4385a8afe77
 2014-04-03T19:12:00.445631Z
 33
@@ -153,20 +132,9 @@ has-props
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-109
+copied
+http://192.168.10.54:9880/Volumes/Playground/massMessenger/massMessenger/massMessenger/WebContent/index.jsp
+33
 
 jobs.xhtml
 file
@@ -210,9 +178,9 @@ file
 34
 
 
+replace
 
-2014-04-28T21:10:57.000000Z
-acab31f06a784aa3416d5698a519c1d3
+a47bbf8a69965bf53b4ba8601765f3f4
 2014-04-29T15:47:47.716673Z
 34
 boyz_bama3@yahoo.com
@@ -224,20 +192,9 @@ has-props
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-1215
+copied
+http://192.168.10.54:9880/Volumes/Playground/massMessenger/massMessenger/massMessenger/WebContent/main.xhtml
+34
 
 resources
 dir
